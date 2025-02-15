@@ -1,0 +1,69 @@
+{
+  "name": "appname",
+  "version": "1.0.0",
+  "description": "Electron React boilerplate",
+  "main": "./app/main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "build": "gulp build",
+    "start": "gulp start",
+    "test": "gulp test",
+    "release": "gulp release",
+    "build-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/images/logo.icns --prune=true --out=../release-builds",
+    "build-linux": "electron-packager . AppName --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/images/logo.png --prune=true --out=../release-builds",
+    "build-windows": "electron-packager . AppName --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/images/logo.ico --prune=true --out=../release-builds --version-string.CompanyName=CompanyName --version-string.FileDescription=FileDescription --version-string.ProductName=ProductName",
+    "build-debian": "electron-installer-debian --src ../release-builds/linux-x64/ --arch amd64 --config ../debian.json",
+    "build-dmg": "electron-installer-dmg ../release-builds/darwin-x64/AppName.app AppName --icon=./assets/images/logo.icns --overwrite"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Anonymous",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "electron": "~1.8.2",
+    "electron-builder": "^20.0.8",
+    "electron-react-devtools": "^0.5.3",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-css": "^0.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jest": "^22.4.2",
+    "react-test-renderer": "^16.2.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.1.6",
+    "alertifyjs": "^1.11.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "dexie": "^2.0.4",
+    "electron-fetch": "^1.3.0",
+    "electron-is-dev": "^0.3.0",
+    "electron-prompt": "^1.2.0",
+    "electron-store": "^2.0.0",
+    "node-cmdline-parser": "^1.0.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.3.1"
+  },
+  "build": {
+    "appId": "com.your.app.id",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "publish": null
+  }
+}

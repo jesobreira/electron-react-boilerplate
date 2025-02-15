@@ -1,0 +1,68 @@
+@import 'winstrap.css';
+
+
+html,body {
+	height: 100%;
+	user-select: none;
+}
+
+.container-fixed {
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.container-fixed .col {
+  height: 100%;
+  overflow: auto;
+}
+
+.row-xs-12 { height: 100% !important; }
+.row-xs-11 { height: 91.66666666666666% !important; }
+.row-xs-10 { height: 83.33333333333334% !important; }
+.row-xs-9 { height: 75% !important; }
+.row-xs-8 { height: 66.66666666666666% !important; }
+.row-xs-7 { height: 58.333333333333336% !important; }
+.row-xs-6 { height: 50% !important; }
+.row-xs-5 { height: 41.66666666666667% !important;}
+.row-xs-4 { height: 33.33333333333333% !important;}
+.row-xs-3 { height: 25% !important; }
+.row-xs-2 { height: 16.666666666666664% !important; }
+.row-xs-1 { height: 8.333333333333332% !important; }
+
+.vmiddle {
+	display: flex;
+	vertical-align: middle;
+}
+
+.vmiddle * {
+	margin: auto;
+}
+
+* {
+	cursor: default !important;
+	outline: none !important;
+}
+
+input[type=text], textarea {
+	cursor: text !important;
+}
+
+tr.color-accent {
+	color: white !important;
+}
+
+tr.color-accent:hover {
+	background: #0078D7 !important;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color: white !important;
+}
+
+.untouchable {
+	user-select: none;
+	user-drag: none;
+}
