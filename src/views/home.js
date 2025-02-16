@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom'
 const electron = require('electron')
 const nodeFetch = electron.remote.require('electron-fetch').default
 
-import store from '../services/store'
-
 import Settings from './settings'
-
-import HomePainel from './HomePainel'
 
 export default class Home extends Component {
 	constructor() {

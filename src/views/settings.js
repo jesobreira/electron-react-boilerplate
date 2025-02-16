@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import store, { sql } from '../services/store'
-
 export default class Settings extends Component {
 	constructor() {
         super()
